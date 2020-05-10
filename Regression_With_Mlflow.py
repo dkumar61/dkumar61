@@ -30,7 +30,8 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
 
 
-# In[4]:
+alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
+l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
 
 
 # parmeters for model
