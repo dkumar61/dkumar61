@@ -80,69 +80,69 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(lr, "model")
 
 
-# In[6]:
+# # In[6]:
 
 
-# Visualising the Training set results
-plt.scatter(X_train, y_train, color = 'red')
-plt.plot(X_train, lr.predict(X_train), color = 'blue')
-plt.title('Salary vs Experience (Training set)')
-plt.xlabel('Years of Experience')
-plt.ylabel('Salary')
-plt.show()
+# # Visualising the Training set results
+# plt.scatter(X_train, y_train, color = 'red')
+# plt.plot(X_train, lr.predict(X_train), color = 'blue')
+# plt.title('Salary vs Experience (Training set)')
+# plt.xlabel('Years of Experience')
+# plt.ylabel('Salary')
+# plt.show()
 
 
-# In[7]:
+# # In[7]:
 
 
-# Visualising the Test set results
-plt.scatter(X_test, y_test, color = 'red')
-plt.plot(X_train, lr.predict(X_train), color = 'blue')
-plt.title('Salary vs Experience (Test set)')
-plt.xlabel('Years of Experience')
-plt.ylabel('Salary')
-plt.show()
+# # Visualising the Test set results
+# plt.scatter(X_test, y_test, color = 'red')
+# plt.plot(X_train, lr.predict(X_train), color = 'blue')
+# plt.title('Salary vs Experience (Test set)')
+# plt.xlabel('Years of Experience')
+# plt.ylabel('Salary')
+# plt.show()
 
 
-# In[8]:
+# # In[8]:
 
 
-df1.plot(kind='bar',figsize=(10,8))
-plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')
-plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
-plt.show()
+# df1.plot(kind='bar',figsize=(10,8))
+# plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')
+# plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+# plt.show()
 
 
-# In[10]:
+# # In[10]:
 
 
-mlflow.search_runs()
+# mlflow.search_runs()
 
 
-# In[10]:
+# # In[10]:
 
 
-run_id1 = "b3228b3a4a6d45e89e6ce98a3453a111"
-model_uri = "file:///Users/dhananjay/Desktop/Machine%20Learning/Part%202%20-%20Regression/Section%204%20-%20Simple%20Linear%20Regression/mlruns/3/b3228b3a4a6d45e89e6ce98a3453a111/artifacts/model"
+# run_id1 = "b3228b3a4a6d45e89e6ce98a3453a111"
+# model_uri = "file:///Users/dhananjay/Desktop/Machine%20Learning/Part%202%20-%20Regression/Section%204%20-%20Simple%20Linear%20Regression/mlruns/3/b3228b3a4a6d45e89e6ce98a3453a111/artifacts/model"
 
 
-# In[11]:
+# # In[11]:
 
 
-model = mlflow.sklearn.load_model(model_uri = model_uri)
+# model = mlflow.sklearn.load_model(model_uri = model_uri)
 
 
-# In[12]:
+# # In[12]:
 
 
-model.get_params()
+# model.get_params()
 
 
-# In[13]:
+# # In[13]:
 
 
-#import numpy as np
-#arr = np.array([[20]])
-#model.predict(arr)
-model.predict(X_test)
+# #import numpy as np
+# #arr = np.array([[20]])
+# #model.predict(arr)
+# model.predict(X_test)
 
