@@ -8,5 +8,3 @@ dependencies:
   - mlflow
   - cloudpickle==1.4.1
 name: mlflow-env
-mlflow:
-  experiment_name: "RegressionSal"
