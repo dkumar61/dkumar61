@@ -14,7 +14,7 @@ import pandas as pd
 import mlflow
 import mlflow.sklearn
 
-#mlflow.set_experiment("RegressionSal")
+mlflow.set_experiment("RegressionSal")
 
 # In[2]:
 
