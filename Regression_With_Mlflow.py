@@ -33,10 +33,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, rando
 alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
 l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
 
-
-# parmeters for model
-alpha = 0.7
-l1_ratio = 0.7
+parmeters for model
+#alpha = 0.7
+#l1_ratio = 0.7
 random_state=40
 
 
