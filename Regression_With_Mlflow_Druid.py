@@ -73,7 +73,7 @@ with mlflow.start_run():
     import pandas as pd
 
     #Chnage host and port for Druid db
-    engine = create_engine("druid://18.218.21.17:3888/druid/v2/sql/")
+    engine = create_engine("druid://3.23.128.57:3888/druid/v2/sql/")
     places = Table('claims', MetaData(bind=engine), autoload=True)
     df = pd.read_sql(select([places.c.Claim_ID, places.c.Member_Id]), con=engine)
     count = pd.read_sql(select([func.count()]).select_from(places), con=engine)
